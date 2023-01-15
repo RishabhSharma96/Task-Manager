@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../templates/headerLinks.ejs') %>
+    <link rel="stylesheet" href="../css/newTaskcss.css">
+    <title>Add Task</title>
+</head>
+
+<body>
+
+    <%- include ('../templates/navbar.ejs') %>
+    
+    <div class="form">
+        <form action="/add_task" method="POST">
+
+            <div class="title">
+                ADD A NEW TASK
+            </div>
+            <div class="name">
+                Name:<br>
+                <input class="nameinput" type="text" name="name" placeholder="ex : Rishabh">
+            </div>
+            <div class="taskname">
+                Task Name:<br>
+                <input class="in" type="text" name="taskname" placeholder="ex : Wash Dishes">
+            </div>
+            <div class="taskabout">
+                Task Description:<br>
+                <input class="in" type="text" name="taskabout" placeholder="ex : Bring Detergent for Washing Dishesh">
+            </div>
+
+            <input class="button" type="submit" value="Add Task">
+
+        </form>
+    </div>
+
+    <%- include ('../templates/footer.ejs') %>
+
+</body>
+
+</html>

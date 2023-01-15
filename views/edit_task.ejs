@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../templates/headerLinks.ejs') %>
+        <link rel="stylesheet" href="../css/newTaskcss.css">
+        <title>Edit Task</title>
+</head>
+
+<body>
+
+    <%- include ('../templates/navbar.ejs') %>
+
+        <% if (data !='' ){ %>
+            <div class="form">
+                <form class="formedit" action="/edit/<%= data._id %>" method="POST">
+
+                    <div class="title">
+                        EDIT TASK
+                    </div>
+                    <div class="name">
+                        Name:<br>
+                        <input class="nameinput" type="text" name="name" placeholder="ex : Wash Dishes"
+                            value="<%= data.Name %>">
+                    </div>
+                    <div class="taskname">
+                        Task Name:<br>
+                        <input class="in" type="text" name="taskname" placeholder="ex : Wash Dishes"
+                            value="<%= data.TaskName %>">
+                    </div>
+                    <div class="taskabout">
+                        Task Description:<br>
+                        <input class="in" type="text" name="taskabout" value="<%= data.TaskDescription %>"
+                            placeholder="ex : Bring Detergent for Washing Dishesh">
+                    </div>
+                    <div class="taskabout">
+                        Task Status:<br>
+                        <input type="radio" class="radioo" name="status" value="false" checked> Incomplete 
+                        <input type="radio" class="radioo" name="status" value="true"> Completed
+                    </div>
+
+                    <input class="button" type="submit" value="Edit Task">
+
+                </form>
+            </div>
+            <% } %>
+
+                <%- include ('../templates/footer.ejs') %>
+
+</body>
+
+</html>

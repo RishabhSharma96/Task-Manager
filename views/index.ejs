@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../templates/headerLinks.ejs') %>
+        <title>Tasks</title>
+</head>
+
+<body>
+
+    <%- include ('../templates/navbar.ejs') %>
+        <div class="tasks">
+            <div class="aboutContent">
+                <div class="number">TASK NUMBER</div>
+                <div class="name">TASK NAME</div>
+                <div class="about">TASK INFO</div>
+                <div class="status">TASK STATUS</div>
+                <div class="options">OPTIONS</div>
+            </div>
+
+
+
+            <% if (data !='' ){ %>
+                <% data.forEach((row,index)=>{ %>
+
+                    <% if (row.IsCompleted==true ){ var done="Completed" } else{ var done="Incomplete" } %>
+
+                        <div class="content">
+                            <div class="number">
+                                <%= index+1 %>
+                            </div>
+                            <div class="name">
+                                <%= row.TaskName %>
+                            </div>
+                            <div class="about">
+                                <%= row.TaskDescription %>
+                            </div>
+                            <div class="status">
+                                <%= done %>
+                            </div>
+                            <div class="options">
+                                <div><a href="/delete/<%= row._id %>"><i class="fa fa-trash-o"
+                                            style="font-size:40px;color:red"></i></a></div>
+                                <div><a href="/edit/<%= row._id %>"><i class="fa fa-edit"
+                                            style="font-size:40px;color:green"></i></a></div>
+                            </div>
+                        </div>
+                        <%})%>
+
+
+                            <% }else{ %>
+
+                                <h1 class="sta">Yayyyy! You are free for now</h1>
+
+                                <% } %>
+        </div>
+
+        <%- include ('../templates/footer.ejs') %>
+
+</body>
+
+</html>

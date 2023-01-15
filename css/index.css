@@ -1,0 +1,190 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(228, 241, 244);
+}
+
+html {
+    min-height: 100%;
+}
+
+/* --------------------------NAVBAR CSS------------------------------- */
+
+nav {
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(34, 33, 36);
+    color: white;
+}
+
+nav li {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 1rem;
+}
+
+.nav-logo {
+    flex: 1;
+    font-size: 2rem;
+    margin-left: 1rem;
+    font-weight: bolder;
+}
+
+.nav-toggler {
+    display: none;
+    font-size: 2rem;
+}
+
+nav a:hover {
+    color: cyan;
+}
+
+@media(max-width:678px) {
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    .nav-toggler {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-items {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .collapsed {
+        display: block;
+    }
+}
+
+
+/* -----------------------CONTENT SECTION CSS----------------------------- */
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 219, 219);
+    padding-top: 2rem;
+    margin-bottom: 6rem;
+}
+
+.aboutContent {
+    display: flex;
+    font-weight: bolder;
+    column-gap: 2rem;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin-bottom: 1.2rem;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    margin: 1.2rem 0;
+}
+
+.number {
+    width: 10rem;
+    word-wrap: break-word;
+    text-align: center;
+    margin: auto auto;
+}
+
+.name {
+    width: 12rem;
+    word-wrap: break-word;
+    text-align: center;
+    margin: auto 0px;
+}
+
+.about {
+    width: 25rem;
+    word-wrap: break-word;
+    margin-right: 1rem;
+    text-align: center;
+    margin: auto 0px;
+}
+
+.status {
+    width: 10rem;
+    word-wrap: break-word;
+    text-align: center;
+    margin: auto auto;
+}
+
+.options {
+    width: 6rem;
+    word-wrap: break-word;
+    text-align: center;
+    display: flex;
+    align-items: baseline;
+    margin: auto auto;
+}
+
+.content .number,.content  .name {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+i{
+    margin: 0 0.5rem;
+}
+
+@media(max-width:1200px){
+    .aboutContent , .content{
+        column-gap: 0rem;
+    }
+}
+
+@media(max-width:1000px){
+    .aboutContent , .content{
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem; 
+    }
+    .number,.name,.about,.status,.options {
+        word-wrap: break-word;
+        text-align: center;
+        margin-top: 0.11rem;
+    }
+}
+
+.sta{
+    color: green;
+    margin: 2rem;
+}
+
+
+/* -------------------FOOTER CSS-------------------------------- */
+
+footer{
+    height: 1.8rem;
+    background-color: rgb(34, 33, 36);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+}

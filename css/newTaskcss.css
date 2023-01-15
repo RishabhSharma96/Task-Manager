@@ -1,0 +1,80 @@
+.form{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(92, 4, 173);
+
+}
+
+form{
+    height: 28rem;
+    width: 28rem;
+    border: 3px solid red;
+    border-radius: 15px;
+    padding-left: 1rem;
+}
+
+.formedit{
+    margin-top: -2rem;
+    height: 33rem;
+}
+
+.title,.title1{
+    font-size: 3rem;
+    font-style: oblique;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-decoration: underline;
+}
+
+.title1{
+    margin-bottom: 2rem;
+    margin-top: -2rem;
+    font-size: 2rem;
+    font-style: normal;
+}
+
+.name,.taskname,.taskabout{
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.in{
+    width: 90%;
+    margin : 1rem 0;
+    height: 1.9rem;
+    border-radius: 2rem;
+    border: 1px solid blueviolet;
+    padding-left: 10px;
+}
+
+.nameinput{
+    width: 210%;
+    margin : 1rem 0;
+    height: 1.9rem;
+    border-radius: 2rem;
+    border: 1px solid blueviolet;
+    padding-left: 10px;
+}
+
+.button{
+    width: 20rem;
+    height: 2rem;
+    background-color: rgb(231, 215, 246);
+    border-radius: 2rem;
+    border: 1px solid blueviolet;
+    text-align: center;
+    margin-left: 3rem;
+    margin-top: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+.radioo{
+    margin-bottom: 1rem;
+}
